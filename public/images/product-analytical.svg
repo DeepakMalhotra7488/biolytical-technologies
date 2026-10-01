@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#3a080b"/>
+    </linearGradient>
+
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ed1c28"/>
+      <stop offset="100%" stop-color="#a50e16"/>
+    </linearGradient>
+  </defs>
+
+
+  <!-- Background -->
+
+  <rect
+    width="800"
+    height="520"
+    fill="url(#bg)"
+  />
+
+
+  <!-- Background circles -->
+
+  <circle
+    cx="640"
+    cy="110"
+    r="180"
+    fill="none"
+    stroke="#c9151e"
+    stroke-width="2"
+    opacity=".25"
+  />
+
+  <circle
+    cx="640"
+    cy="110"
+    r="130"
+    fill="none"
+    stroke="#c9151e"
+    stroke-width="2"
+    opacity=".18"
+  />
+
+
+  <!-- Instrument body -->
+
+  <rect
+    x="165"
+    y="125"
+    width="470"
+    height="285"
+    rx="22"
+    fill="#151515"
+    stroke="#555555"
+    stroke-width="4"
+  />
+
+
+  <!-- Top panel -->
+
+  <rect
+    x="195"
+    y="155"
+    width="410"
+    height="105"
+    rx="12"
+    fill="#080808"
+    stroke="#333333"
+    stroke-width="3"
+  />
+
+
+  <!-- Display -->
+
+  <rect
+    x="225"
+    y="178"
+    width="220"
+    height="60"
+    rx="7"
+    fill="#23080b"
+    stroke="#c9151e"
+    stroke-width="2"
+  />
+
+  <text
+    x="245"
+    y="218"
+    font-family="Arial, sans-serif"
+    font-size="28"
+    font-weight="700"
+    fill="#ed1c28"
+  >
+    ANALYSIS
+  </text>
+
+
+  <!-- Control buttons -->
+
+  <circle
+    cx="510"
+    cy="190"
+    r="13"
+    fill="#c9151e"
+  />
+
+  <circle
+    cx="550"
+    cy="190"
+    r="13"
+    fill="#555555"
+  />
+
+  <circle
+    cx="510"
+    cy="225"
+    r="13"
+    fill="#555555"
+  />
+
+  <circle
+    cx="550"
+    cy="225"
+    r="13"
+    fill="#c9151e"
+  />
+
+
+  <!-- Main circular analyzer -->
+
+  <circle
+    cx="400"
+    cy="335"
+    r="82"
+    fill="#090909"
+    stroke="#555555"
+    stroke-width="6"
+  />
+
+  <circle
+    cx="400"
+    cy="335"
+    r="60"
+    fill="#170607"
+    stroke="#c9151e"
+    stroke-width="5"
+  />
+
+  <circle
+    cx="400"
+    cy="335"
+    r="16"
+    fill="url(#red)"
+  />
+
+
+  <!-- Analyzer needle -->
+
+  <path
+    d="M400 335 L442 302"
+    stroke="#ffffff"
+    stroke-width="6"
+    stroke-linecap="round"
+  />
+
+
+  <!-- Bottom details -->
+
+  <rect
+    x="220"
+    y="430"
+    width="360"
+    height="10"
+    rx="5"
+    fill="#c9151e"
+  />
+
+  <rect
+    x="280"
+    y="450"
+    width="240"
+    height="7"
+    rx="4"
+    fill="#444444"
+  />
+
+</svg>
