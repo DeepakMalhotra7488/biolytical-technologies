@@ -2,22 +2,12 @@ import {PageHero} from "../components/PageHero";
 
 const services = [
   {
-    title: "Sales",
-    description:
-      "Supply of analytical, measuring, testing and processing instruments for laboratory and industrial needs."
-  },
-  {
-    title: "Installation",
-    description:
-      "Professional installation and commissioning support for supplied equipment."
-  },
-  {
-    title: "Service & Maintenance",
+    title: "Turnkey Solutions for Defence R&D Facilities",
     description:
       "After-sales support, preventive maintenance and troubleshooting assistance."
   },
   {
-    title: "Technical Support",
+    title: "Customize Software Development & Technical Consultancy",
     description:
       "Application-oriented guidance to help customers select and use instruments effectively."
   }
@@ -50,9 +40,9 @@ export const Services=(()=>{
               key={service.title}
             >
 
-              <span className="service-no">
+              {/* <span className="service-no">
                 0{index + 1}
-              </span>
+              </span> */}
 
               <Wrench />
 

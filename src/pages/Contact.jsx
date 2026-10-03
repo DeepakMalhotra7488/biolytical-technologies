@@ -61,7 +61,7 @@ export const Contact=(()=>{
                 </strong>
 
                 <span>
-                  +919889126501
+                  +919289745747
                 </span>
 
               </div>
@@ -99,7 +99,8 @@ export const Contact=(()=>{
                 </strong>
 
                 <span>
-                  Registered office: Plot no. 168, Vidya Vihar Colony, St. Johns School Road, Marhauli, Varanasi, Uttar Pradesh.- 221108
+                  {/* Registered office: Plot no. 168, Vidya Vihar Colony, St. Johns School Road, Marhauli, Varanasi, Uttar Pradesh.- 221108 */}
+                 R-9/309, Hare Krishna Marg, Sai Media Rajnagar, Ghaziabad, Uttar Pradesh. - 201002 
                 </span>
 
               </div>

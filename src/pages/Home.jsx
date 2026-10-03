@@ -15,6 +15,7 @@ import {
   Microscope,
   Factory 
 } from "lucide-react";
+import { OurClients } from "../components/OurClients";
 
 const products = [
   {
@@ -315,6 +316,9 @@ export const Home=(()=>{
         </div>
 
       </section>
+
+
+              <OurClients/>
 
 
       <section className="cta">
