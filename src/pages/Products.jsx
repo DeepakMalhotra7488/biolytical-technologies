@@ -1,9 +1,6 @@
 
 import { PageHero } from "../components/PageHero";
-
-import {
-  Link
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {
   ChevronRight,
