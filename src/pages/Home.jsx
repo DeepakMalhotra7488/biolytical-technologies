@@ -23,28 +23,32 @@ const products = [
     icon: FlaskConical,
     description:
       "Precision instruments for laboratory analysis, research and quality control.",
-    image: "/images/product-analytical.svg"
+    image: "/images/product-analytical.svg",
+    link: "/products/analytical"
   },
   {
     title: "Measuring Instruments",
     icon: Gauge,
     description:
       "Reliable measurement solutions for industrial and laboratory applications.",
-    image: "/images/product-measuring.svg"
+    image: "/images/product-measuring.svg",
+    link: "/products/measuring"
   },
   {
     title: "Testing Instruments",
     icon: Microscope,
     description:
       "Testing systems designed for accurate, repeatable and dependable results.",
-    image: "/images/product-testing.svg"
+    image: "/images/product-testing.svg",
+    link: "/products/testing"
   },
   {
     title: "Processing Instruments",
     icon: Factory,
     description:
       "Practical processing and production instruments for demanding environments.",
-    image: "/images/product-processing.svg"
+    image: "/images/product-processing.svg",
+    link: "/products/processing"
   }
 ];
 
@@ -229,7 +233,7 @@ export const Home=(()=>{
                       {product.description}
                     </p>
 
-                    <Link to="/contact">
+                    <Link to={product.link}>
                       Enquire
                       <ChevronRight size={16} />
                     </Link>
@@ -318,7 +322,7 @@ export const Home=(()=>{
       </section>
 
 
-              <OurClients/>
+       <OurClients/>
 
 
       <section className="cta">
