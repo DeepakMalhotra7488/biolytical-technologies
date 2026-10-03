@@ -8,30 +8,36 @@ import {
 } from "lucide-react";
 
 
-const categories = [
+
+const solutionAreas = [
   {
-    title: "Fire & Safety Testing",
+    title: "Turnkey Analytical Solutions",
     description:
-      "Testing of fire resistance, flammability, smoke, ignition, thermal hazards and safety performance of materials, products and systems."
+      "End-to-end design, integration and implementation of analytical laboratories and analytical systems, covering application assessment, system design, instrument selection, sample preparation, automation, data management, installation, commissioning, validation, training and after-sales support."
   },
   {
-    title: "Dimensional & Metrology Testing",
+    title: "Customized Analytical Solutions",
     description:
-      "Measurement and verification of dimensions, geometry, surface characteristics, accuracy, tolerances and calibration parameters."
+      "Development and integration of application-specific analytical systems combining instruments, accessories, software and supporting infrastructure to meet defined customer requirements."
   },
   {
-    title: "Radiation Testing",
+    title: "Laboratory Setup & Modernization",
     description:
-      "Detection, measurement and assessment of ionizing and non-ionizing radiation, radiation dose, shielding and radiation safety."
+      "Complete analytical laboratory setup, expansion, modernization and technology upgrades, including equipment integration and workflow optimization."
   },
   {
-    title: "Battery & Energy Testing",
+    title: "Process & Pilot-Scale Analytical Solutions",
     description:
-      "Testing of battery performance, capacity, charging/discharging, efficiency, cycle life, thermal behavior and safety."
+      "Integrated analytical and monitoring systems for laboratory, pilot-scale and process-development applications."
+  },
+  {
+    title: "Project Engineering & Integration",
+    description:
+      "Complete project coordination, system integration, installation, commissioning and performance verification from concept to operational handover."
   }
 ];
 
-export function TestingInstruments() {
+export function TurnkeySolutions() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleDescription = (index) => {
@@ -45,25 +51,29 @@ export function TestingInstruments() {
       <section className="product-category-hero">
         <div className="container">
 
-          <Link to="/products" className="product-back-link">
+          <Link
+            to="/services"
+            className="product-back-link"
+          >
             <ArrowLeft size={17} />
-            Back to Products
+            Back to Services
           </Link>
 
           <div className="product-category-hero-content">
 
             <span className="eyebrow">
-              PRODUCT CATEGORY
+              SERVICE CATEGORY
             </span>
 
             <h1>
-              Testing
-              <span> Instruments</span>
+              Turnkey
+              <span> Solutions</span>
             </h1>
 
             <p>
-              Reliable testing solutions for safety, performance,
-              quality, compliance and material characterization.
+              End-to-end analytical solutions for Defence R&D
+              facilities, laboratories, pilot-scale environments
+              and specialized technical applications.
             </p>
 
           </div>
@@ -72,7 +82,7 @@ export function TestingInstruments() {
       </section>
 
 
-      {/* CATEGORIES */}
+      {/* SOLUTION AREAS */}
       <section className="section product-category-section">
         <div className="container">
 
@@ -81,20 +91,21 @@ export function TestingInstruments() {
             <div>
 
               <span className="eyebrow">
-                TESTING SOLUTIONS
+                TURNKEY SOLUTIONS
               </span>
 
               <h2>
-                Explore Our
-                <span> Categories</span>
+                Our Solution
+                <span> Areas</span>
               </h2>
 
             </div>
 
             <p>
-              Explore our testing instrument categories designed
-              for accurate evaluation, safety assessment and
-              performance verification.
+              From laboratory setup and system integration to
+              customized analytical solutions, we provide
+              application-focused support across the complete
+              project lifecycle.
             </p>
 
           </div>
@@ -102,13 +113,13 @@ export function TestingInstruments() {
 
           <div className="product-category-grid">
 
-            {categories.map((category, index) => (
+            {solutionAreas.map((solution, index) => (
 
               <div
                 className={`product-category-card ${
                   openIndex === index ? "category-open" : ""
                 }`}
-                key={category.title}
+                key={solution.title}
               >
 
                 {/* TOP */}
@@ -130,14 +141,14 @@ export function TestingInstruments() {
                 <div className="category-content">
 
                   <h3>
-                    {category.title}
+                    {solution.title}
                   </h3>
 
 
                   {openIndex === index && (
 
                     <p className="category-description">
-                      {category.description}
+                      {solution.description}
                     </p>
 
                   )}
@@ -171,7 +182,7 @@ export function TestingInstruments() {
                 <div className="category-bottom">
 
                   <span>
-                    TESTING
+                    TURNKEY
                   </span>
 
                   <div className="category-line" />
@@ -191,16 +202,16 @@ export function TestingInstruments() {
             <div>
 
               <span className="eyebrow">
-                NEED MORE INFORMATION?
+                NEED TECHNICAL ASSISTANCE?
               </span>
 
               <h3>
-                Looking for a specific testing solution?
+                Looking for a turnkey analytical solution?
               </h3>
 
               <p>
-                Contact our team for product specifications,
-                application guidance and technical assistance.
+                Contact our team to discuss your laboratory,
+                analytical system or project requirements.
               </p>
 
             </div>
@@ -210,11 +221,8 @@ export function TestingInstruments() {
               to="/contact"
               className="product-cta-button"
             >
-
               Contact Us
-
               <ArrowUpRight size={18} />
-
             </Link>
 
           </div>

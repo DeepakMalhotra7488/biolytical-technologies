@@ -1,25 +1,29 @@
-import {PageHero} from "../components/PageHero";
+
+import { Link } from "react-router-dom";
+import { PageHero } from "../components/PageHero";
+
+import {
+  Wrench,
+  CheckCircle2,
+  ArrowUpRight
+} from "lucide-react";
 
 const services = [
   {
     title: "Turnkey Solutions for Defence R&D Facilities",
     description:
-      "After-sales support, preventive maintenance and troubleshooting assistance."
+      "After-sales support, preventive maintenance and troubleshooting assistance.",
+    link: "/services/turnkey-solutions"
   },
   {
     title: "Customize Software Development & Technical Consultancy",
     description:
-      "Application-oriented guidance to help customers select and use instruments effectively."
+      "Application-oriented guidance to help customers select and use instruments effectively.",
+    link: "/services/software-development"
   }
 ];
 
-import {
-  Wrench,
-  CheckCircle2,
-} from "lucide-react";
-
-export const Services=(()=>{
-
+export const Services = (() => {
   return (
     <>
       <PageHero
@@ -29,32 +33,43 @@ export const Services=(()=>{
       />
 
 
+      {/* SERVICES */}
       <section className="section">
 
         <div className="container service-grid">
 
-          {services.map((service, index) => (
+          {services.map((service) => (
 
-            <article
-              className="service-card"
+            <Link
+              to={service.link}
+              className="service-card-link"
               key={service.title}
             >
 
-              {/* <span className="service-no">
-                0{index + 1}
-              </span> */}
+              <article className="service-card">
 
-              <Wrench />
+                <Wrench />
 
-              <h3>
-                {service.title}
-              </h3>
+                <div className="service-card-content">
 
-              <p>
-                {service.description}
-              </p>
+                  <h3>
+                    {service.title}
+                  </h3>
 
-            </article>
+                  <p>
+                    {service.description}
+                  </p>
+
+                  <span className="service-read-more">
+                    Explore Service
+                    <ArrowUpRight size={17} />
+                  </span>
+
+                </div>
+
+              </article>
+
+            </Link>
 
           ))}
 
@@ -63,6 +78,7 @@ export const Services=(()=>{
       </section>
 
 
+      {/* SERVICE APPROACH */}
       <section className="split-section">
 
         <div className="container split reverse">
@@ -125,4 +141,5 @@ export const Services=(()=>{
 
     </>
   );
-}) 
+});
+

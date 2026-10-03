@@ -12,14 +12,12 @@
   import { Products } from "./pages/Products";
   import { Services } from "./pages/Services";
 
-
   import { AnalyticalInstruments } from "./pages/products/AnalyticalInstruments";
   import { MeasuringInstruments } from "./pages/products/MeasuringInstruments";
   import { TestingInstruments } from "./pages/products/TestingInstruments";
   import { ProcessingInstruments } from "./pages/products/ProcessingInstruments";
 
-
-
+  import { TurnkeySolutions } from "./pages/services/TurnkeySolutions";
 
   import "bootstrap/dist/css/bootstrap.min.css";
   import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -90,6 +88,11 @@
             <Route
               path="/services"
               element={<Services />}
+            />
+
+            <Route
+              path="/services/turnkey-solutions"
+              element={<TurnkeySolutions />}
             />
 
             <Route

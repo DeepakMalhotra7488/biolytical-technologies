@@ -1,24 +1,59 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, ChevronDown } from "lucide-react";
 
 const categories = [
-  "Spectroscopy & Optical Analysis",
-  "Chromatography & Separation Science",
-  "Mass Spectrometry",
-  "Thermal Analysis",
-  "Electrochemical Analysis",
-  "Microscopy & Imaging",
-  "X-ray & Structural Analysis",
-  "Elemental & Combustion Analysis"
+  {
+    title: "Spectroscopy & Optical Analysis",
+    description:
+      "UV-Vis, FTIR, NIR, Raman, fluorescence and other optical techniques for identification and characterization."
+  },
+  {
+    title: "Chromatography & Separation Science",
+    description:
+      "GC, HPLC, UHPLC, IC, GPC/SEC and other techniques for separation, identification and quantification."
+  },
+  {
+    title: "Mass Spectrometry",
+    description:
+      "GC-MS, LC-MS, ICP-MS and high-resolution MS for molecular and trace-level analysis."
+  },
+  {
+    title: "Thermal Analysis",
+    description:
+      "DSC, TGA, DMA, TMA and related techniques for studying thermal and thermo-mechanical properties."
+  },
+  {
+    title: "Electrochemical Analysis",
+    description:
+      "pH, conductivity, ion analysis, titration, potentiometry and electrochemical characterization."
+  },
+  {
+    title: "Microscopy & Imaging",
+    description:
+      "Optical microscopy, SEM, TEM, AFM and imaging technologies for morphology and microstructural analysis."
+  },
+  {
+    title: "X-ray & Structural Analysis",
+    description:
+      "XRD, XRF, XPS and related techniques for structural, phase and elemental characterization."
+  },
+  {
+    title: "Elemental & Combustion Analysis",
+    description:
+      "AAS, ICP-OES, CHNS/O, carbon-sulfur and related techniques for elemental and composition analysis."
+  }
 ];
 
-
 export function AnalyticalInstruments() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleDescription = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <main className="product-category-page">
-
-      {/* Hero */}
 
       <section className="product-category-hero">
 
@@ -31,7 +66,6 @@ export function AnalyticalInstruments() {
             <ArrowLeft size={17} />
             Back to Products
           </Link>
-
 
           <div className="product-category-hero-content">
 
@@ -56,8 +90,6 @@ export function AnalyticalInstruments() {
       </section>
 
 
-      {/* Categories */}
-
       <section className="section product-category-section">
 
         <div className="container">
@@ -65,6 +97,7 @@ export function AnalyticalInstruments() {
           <div className="product-category-heading">
 
             <div>
+
               <span className="eyebrow">
                 ANALYTICAL SOLUTIONS
               </span>
@@ -73,6 +106,7 @@ export function AnalyticalInstruments() {
                 Explore Our
                 <span> Categories</span>
               </h2>
+
             </div>
 
             <p>
@@ -88,8 +122,10 @@ export function AnalyticalInstruments() {
             {categories.map((category, index) => (
 
               <div
-                className="product-category-card"
-                key={category}
+                className={`product-category-card ${
+                  openIndex === index ? "category-open" : ""
+                }`}
+                key={category.title}
               >
 
                 <div className="category-top">
@@ -109,8 +145,38 @@ export function AnalyticalInstruments() {
                 <div className="category-content">
 
                   <h3>
-                    {category}
+                    {category.title}
                   </h3>
+
+
+                  {openIndex === index && (
+
+                    <p className="category-description">
+                      {category.description}
+                    </p>
+
+                  )}
+
+
+                  <button
+                    type="button"
+                    className="category-read-more"
+                    onClick={() => toggleDescription(index)}
+                  >
+                    {openIndex === index
+                      ? "Read Less"
+                      : "Read More"}
+
+                    <ChevronDown
+                      size={16}
+                      className={
+                        openIndex === index
+                          ? "rotate-arrow"
+                          : ""
+                      }
+                    />
+
+                  </button>
 
                 </div>
 
@@ -131,8 +197,6 @@ export function AnalyticalInstruments() {
 
           </div>
 
-
-          {/* Bottom CTA */}
 
           <div className="product-category-cta">
 
